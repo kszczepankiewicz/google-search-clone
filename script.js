@@ -6,6 +6,6 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
     const value = input.value;
     output.textContent += value + '\n';
-
+    navigator.clipboard.writeText(value);
     window.open(`https://www.google.com/search?q=` + value);
 });
