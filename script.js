@@ -8,5 +8,12 @@ formEl.addEventListener('submit', (e) => {
     const value = constantTextEl.value + ' ' + inputEl.value;
     outputEl.textContent += value + '\n';
     navigator.clipboard.writeText(value);
-    window.open(`https://www.google.com/search?q=` + value);
+    window.open(`https://www.google.com/search?q=` + encodeURIComponent(value));
 });
+
+//saveToLocalStorage(newEntry)
+//handleApi()
+
+//window.location.href property
+
+
