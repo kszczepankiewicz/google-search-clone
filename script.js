@@ -14,6 +14,5 @@ formEl.addEventListener('submit', (e) => {
 //saveToLocalStorage(newEntry)
 //handleApi()
 
-//window.location.href property
 
 
