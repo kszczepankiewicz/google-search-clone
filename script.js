@@ -4,5 +4,8 @@ const output = document.getElementById('output');
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    output.textContent += input.value + '\n';
+    const value = input.value;
+    output.textContent += value + '\n';
+
+    window.open(`https://www.google.com/search?q=` + value);
 });
