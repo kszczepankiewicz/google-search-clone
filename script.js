@@ -1,11 +1,12 @@
-const form = document.getElementById('form');
-const input = document.getElementById('input');
-const output = document.getElementById('output');
+const formEl = document.getElementById('form');
+const inputEl = document.getElementById('input');
+const outputEl = document.getElementById('output');
+const constantTextEl = document.getElementById('constant-text-el');
 
-form.addEventListener('submit', (e) => {
+formEl.addEventListener('submit', (e) => {
     e.preventDefault();
-    const value = input.value;
-    output.textContent += value + '\n';
+    const value = inputEl.value;
+    outputEl.textContent += value + '\n';
     navigator.clipboard.writeText(value);
     window.open(`https://www.google.com/search?q=` + value);
 });
