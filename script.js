@@ -7,7 +7,7 @@ formEl.addEventListener('submit', (e) => {
     e.preventDefault();
     const value = constantTextEl.value + ' ' + inputEl.value;
     outputEl.textContent += value + '\n';
-    navigator.clipboard.writeText(value);
+    navigator.clipboard.writeText(value).catch(() => alert('Not copied'));
     window.open(`https://www.google.com/search?q=` + encodeURIComponent(value));
 });
 
