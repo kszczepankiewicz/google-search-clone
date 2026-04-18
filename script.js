@@ -1,11 +1,11 @@
 const formEl = document.getElementById('form');
 const inputEl = document.getElementById('input');
 const outputEl = document.getElementById('output');
-const constantTextEl = document.getElementById('constant-text-el');
+const constantTextEl = document.getElementById('constant-text');
 
 formEl.addEventListener('submit', (e) => {
     e.preventDefault();
-    const value = inputEl.value;
+    const value = constantTextEl.value + ' ' + inputEl.value;
     outputEl.textContent += value + '\n';
     navigator.clipboard.writeText(value);
     window.open(`https://www.google.com/search?q=` + value);
